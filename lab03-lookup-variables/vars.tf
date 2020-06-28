@@ -7,7 +7,7 @@ variable "aws_secret_key" {
 }
 variable "region" {
   type = string
-   default = "eu-west-2"
+   default = "eu-west-1"
 }
 variable "aws-ami" {
   type = map
