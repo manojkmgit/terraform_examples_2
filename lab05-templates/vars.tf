@@ -7,7 +7,7 @@ variable "aws_secret_key" {
 }
 variable "region" {
   type = string
-   default = "eu-west-1"
+   default = "eu-west-2"
 }
 variable "aws-ami" {
   type = map
@@ -22,6 +22,7 @@ data "template_file" "init" {
   vars = {
 #    aws_ami = "ami-01a6e31ac994bbc09"
      aws_ami = "${lookup(var.aws-ami, var.region)}"
+
   }
 }
 
