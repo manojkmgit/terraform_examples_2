@@ -1,6 +1,6 @@
 
 resource "aws_key_pair"  "devops_key" {
-   key_name = "foo"
+   key_name = "aws_id_rsa"
    public_key = "${file("${var.devops_public_key}")}"
 }
 # Create a instance
